@@ -2,92 +2,658 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
+<script src="script.js"></script>
+<script src="Jquery.js"></script>
+<script src="swiper.min.js"></script>
+<script src="toggle.js"></script>
+
 <style>
-
-.slide-company {
+  .footer {
     display: flex;
-    margin-top: 60px;
     justify-content: center;
-    height: 170px;
+    clear: both;
     background-color: white;
-}
+    padding-top: 30px;
+  }
 
 
-.arr-slide-company-left {
-    margin: auto 0;
-    margin-right: -5px;
-}
+  .info-clients {
+    margin-left: 60px;
+  }
 
-.arr-slide-company-right {
-    margin: auto 0;
-    height: 19px;
-    width: 8px;
-    margin-left: 20px;
+  .schedule {
+    margin-left: 100px;
+  }
 
-}
 
-.slide-company>div {
+
+  .head-list-katalog {
     display: flex;
-    justify-content: center;
-    width: 950px;
-}
-
-.slide-company-block>img {
-    margin: auto 0;
-    margin-left: 25px;
-}
-@media screen and (max-width: 1024px) {
-  .slide-company{
-    width: 50%;
-    border: 2px solid red;
-  }
-  .slide-company-block{
-    border: 2px solid blue;
-    width: 200px;
-    overflow-x: auto;
 
   }
-  .slide-company-block>img
-  {
-    border: 2px solid red;
-display: block;
-min-width:120px;
+
+  .head-info-clients {
+    display: flex;
   }
-  .slide-company-block::-webkit-scrollbar {
-  display: none;
-}
-.arr-slide-company-left , .arr-slide-company-right{
-  display: none;
+
+  .head-schedule {
+    display: flex;
+  }
+
+
+
+  .head-list-katalog {
+    margin-bottom: -15px;
+  }
+
+  .head-info-clients {
+    margin-bottom: -15px;
+  }
+
+  .head-schedule {
+    margin-bottom: -15px;
+  }
+
+
+  .head-list-katalog>h3 {
+    margin-top: 0;
+  }
+
+  .head-info-clients>h3 {
+    margin-top: 0;
+  }
+
+  .head-schedule>h3 {
+    margin-top: 0;
+  }
+
+  /*------------ style display none Arrow */
+  .head-socila-contac>img:last-child {
+    display: none;
+  }
+
+  .head-list-katalog>img:last-child {
+    display: none;
+  }
+
+  .head-info-clients>img:last-child {
+    display: none;
+  }
+
+  .head-schedule>img:last-child {
+    display: none;
+  }
+
+  /* style display none Arrow  ------------*/
+  /* ----------------- ico head block in footer */
+
+  /* ----------------- social contact */
+  .block-lists {
+    display: block;
+  }
+
+
+  .head-socila-contac {
+    display: flex;
+    width: 100%;
+  }
+
+  /* .head-socila-contac {
+    margin-bottom: -15px;
+  } */
+
+  .head-socila-contac>h3 {
+    margin-top: 0;
+  }
+
+  .head-socila-contac>h3>img {
+    margin-left: 45px;
+    margin-right: 15px;
+  }
+
+  /*  social contact  ----------------- */
+
+
+  .head-list-katalog>h3>img {
+    margin-left: 40px;
+    margin-right: 15px;
+
+  }
+
+  .head-info-clients>h3>img {
+    margin-left: 40px;
+    margin-right: 15px;
+
+  }
+
+  .head-schedule>h3>img {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .phone-list {
+    list-style: none;
+    list-style-position: inside
+  }
+
+  .slide-contac>h3 {
+    color: #363636;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .phone-list>li {
+    color: #363636;
+    font-size: 12px;
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  .socila-icon>ul>li {
+    -webkit-filter: grayscale(100%);
+
+  }
+
+  .socila-icon:hover>ul>li:hover {
+    -webkit-filter: grayscale(0%);
+
+  }
+
+  .socila-icon>ul>li:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  .socila-icon {
+    width: 250px;
+  }
+
+  .socila-icon>h3 {
+    font-size: 12px;
+    margin-left: 40px;
+  }
+
+  .socila-icon>ul>li {
+    display: inline;
+    list-style: none;
+  }
+
+  /*  ico head block in footer -----------------*/
+
+  /* ------------- list katalog */
+  .list-katalog>img {
+    float: left;
+    margin: 15px 15px 0 40px;
+  }
+
+  .list-katalog>h3 {
+    font-size: 16px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+    margin-left: 40px;
+  }
+
+  .name-product-list {
+    list-style: none;
+    list-style-position: inside;
+  }
+
+  .name-product-list>li {
+    font-size: 12px;
+    color: #363636;
+    margin-top: 10px;
+  }
+
+  /*  list katalog ------------- */
+
+  /* ----------- info ofr clients */
+  .info-clients>img {
+    float: left;
+    margin: 15px 15px 0 40px;
+  }
+
+  .info-clients>h3 {
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  .for-client {
+    list-style: none;
+    list-style-position: inside
+  }
+
+  .for-client>li {
+    font-size: 12px;
+    color: #363636;
+    margin-top: 10px;
+  }
+
+  /*  info ofr clients ----------- */
+
+  .schedule>img {
+    float: left;
+    margin: 15px 15px 0 0;
+  }
+
+  .schedule>h3 {
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  .time-send>h3 {
+    font-family: Roboto-Bold;
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+
+  }
+
+  .time-call>h3 {
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  .order-online>h3 {
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+
+  }
+
+  .time-send>p {
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  .time-call>p {
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  .order-online>p {
+    font-size: 12px;
+    color: #363636;
+    width: 126px;
+    white-space: nowrap;
+  }
+
+  /*  schedule ----------- */
+
+  @media screen and (max-width: 980px) {
+
+    /* ----------footer---------- */
+    .footer {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #F2F2F2;
+      white-space: nowrap;
+    }
+
+    .footer>div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid red;
+    }
+
+    /* ----------- block list */
+    .phone-list {
+      margin-left: 45px;
+    }
+
+    .socila-contac>img {
+      margin-left: 85px;
+    }
+
+    .socila-contac>ul {
+      text-align: center;
+      margin: 0 auto;
+      margin-left: 40px;
+    }
+    .block-lists {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    
+
+    .block-lists>div>img {
+      margin-top: 0;
+    }
+
+    .socila-icon {
+      margin-left: 45px;
+    }
+
+    /*  block list  -----------*/
+    .list-katalog{
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+.info-clients{
+  display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
 }
 
-}
+    .schedule {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;    }
+
+    .head-info-clients{
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .head-schedule {
+      display: flex;
+      width: 100%;
+      margin-left:auto;
+      flex-wrap: wrap;
+    }
+    /* -----------  head blocks */
+
+    .head-socila-contac>h3 {
+      margin: 0 auto;
+    }
+
+    .head-list-katalog>h3 {
+      margin: 0 auto;
+    }
+
+    .head-info-clients>h3 {
+      margin: 0 auto;
+    }
+
+
+    .head-socila-contac>h3>img {
+      margin: auto 15px auto 0;
+    }
+
+    .head-socila-contac>img {
+      margin: auto 15px auto auto;
+    }
+
+
+
+    .head-list-katalog>h3>img {
+      margin: auto 15px auto 0;
+
+    }
+
+    .head-list-katalog>img {
+      margin: auto 15px auto auto;
+    }
+
+
+
+    .head-info-clients>h3>img {
+      margin: auto 15px auto auto;
+    }
+
+    .head-info-clients>img {
+      margin: auto 15px auto auto;
+    }
+
+
+    .head-schedule>h3 {
+      margin: 0 auto;
+    }
+
+    .head-schedule>h3>img {
+      margin: auto 15px auto auto;
+
+    }
+
+    .head-schedule>img {
+      margin: auto 15px auto auto;
+    }
+
+    .head-socila-contac>img:last-child {
+      margin: auto 15px auto auto;
+      display: block;
+    }
+
+    /* .head-socila-contac>img:first-child {
+      margin-left: 85px;
+      margin-right: 15px;
+    } */
+
+    .head-list-katalog>h3 {
+      margin: 0 auto;
+    }
+
+    /* .head-list-katalog>img:first-child {
+      margin-left: 50px;
+      margin-right: 15px;
+    } */
+
+    .head-list-katalog>img:last-child {
+      margin: auto 15px auto auto;
+      display: block;
+
+    }
+
+    .head-info-clients>h3 {
+      margin: 0 auto;
+    }
+
+    /* .head-info-clients>img:first-child {
+      margin-left: 100px;
+      margin-right: 15px;
+    } */
+
+    .head-info-clients>img:last-child {
+      margin: auto 15px auto auto;
+      display: block;
+    }
+
+    /* .head-schedule>img:first-child {
+      margin-left: 0px;
+      margin-right: 15px;
+    } */
+
+    .head-schedule>img:last-child {
+      margin: auto 15px auto auto;
+      display: block;
+    }
+
+
+    /*   head blocks ----------- */
+
+
+
+
+    .info-clients {
+      margin-left: 0;
+    }
+
+    .schedule {
+      margin-left: 0;
+    }
+
+    .head-socila-contac {
+      margin-bottom: 0;
+    }
+
+    .head-list-katalog {
+      margin-bottom: 0;
+    }
+
+    .head-info-clients {
+      margin-bottom: 0;
+    }
+
+    .head-schedule {
+      margin-bottom: 0;
+    }
+
+    .socila-contac>img {
+      margin-left: 85px;
+    }
+   .head-list-katalog{
+      display: flex;
+      flex-wrap: wrap;
+    width: 100%;
+      background-color: aqua;
+    }
+
+
+
+
+    /* Accordeon drop down */
+    #name-product-list {
+      display: none;
+    }
+
+    #social-block {
+      display: none;
+    }
+
+    #scheduleBlock {
+      display: none;
+    }
+
+    #for-client {
+      display: none;
+    }
+  }
 </style>
+<script>
+
+</script>
 
 <body>
-      <div class="slide-company">
-
-        <div class="slide-company-block">
-            <div class="arr-slide-company-left"> <img src="./icons/arrow-left-slideCompany.png" alt="arrow-left"
-                    width="8" height="19">
-            </div>
-            <img src="./images/company1.png" alt="company1" width="127" height="62">
-            <img src="./images/company2.png" alt="company2" width="111" height="33">
-            <img src="./images/company3.png" alt="company3" width="113" height="114">
-            <img src="./images/company4.png" alt="company4" width="88" height="88  ">
-            <img src="./images/company1.png" alt="company1" width="127" height="62">
-            <img src="./images/company3.png" alt="company2" width="113" height="114">
-            <div class="arr-slide-company-right"> <img src="./icons/arrow-right-slideCompany.png" alt="arrow-left"
-                    width="8" height="19">
-            </div>
+  <div class="footer">
+    <div class="block-lists">
+      <!-- contact -->
+      <div class="head-socila-contac">
+        <h3> <img src="./icons/phone-footer.png" alt="phone" width="19" height="19">
+          Связь с нами</h3>
+        <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="socila-down"
+          class="socila-down" onclick="accordeon('social-block','socila-down')">
+      </div>
+      <div class="social-block" id="social-block">
+        <ul class="phone-list">
+          <li>+38 (099) 424-44-44</li>
+          <li>+38 (099) 424-44-44</li>
+          <li>+38 (099) 424-44-44</li>
+        </ul>
+        <div class="socila-icon" id="socila-icon">
+          <h3>Присойденяйтесь</h3>
+          <ul>
+            <li>
+              <img src="./icons/telegram.png" alt="telegram icon" width="30" height="30">
+            </li>
+            <li>
+              <img src="./icons/instagram.png" alt="telegram icon" width="30" height="30">
+            </li>
+            <li>
+              <img src="./icons/youtube.png" alt="telegram icon" width="30" height="30">
+            </li>
+            <li>
+              <img src="./icons/facebook.png" alt="telegram icon" width="30" height="30">
+            </li>
+          </ul>
         </div>
+      </div>
 
     </div>
-     
+    <div class="list-katalog">
+      <div class="head-list-katalog">
+        <h3> <img src="./icons/footer-katalog.png" alt="footer katalog " width="19" height="19">
+          КАТАЛОГ ТОВАРОВ</h3>
+        <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDownAcc"
+          class="arrowDownAcc" onclick="accordeon('name-product-list','arrowDownAcc')">
+
+      </div>
+
+      <ul class="name-product-list" id="name-product-list">
+        <li>Жидкости для вейпа</li>
+        <li>Стартовые наборы</li>
+        <li>Баки</li>
+        <li>Дрипки</li>
+        <li>Боксмоды</li>
+        <li>Мехмоды</li>
+        <li>Испарители</li>
+        <li>Аккумуляторы</li>
+        <li>Зарядные</li>
+        <li>Вата</li>
+      </ul>
+    </div>
+    <div class="info-clients">
+      <div class="head-info-clients">
+        <h3> <img src="./icons/clients.png" alt="clients" width="23" height="19">
+          Клиентам</h3>
+        <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDown"
+          onclick="accordeon('for-client','arrowDown')">
+
+      </div>
+
+      <ul class="for-client" id="for-client">
+        <li>Возврат товара</li>
+        <li>Карта сайта</li>
+        <li>Личный кабинет</li>
+        <li>История заказов</li>
+        <li>Закладки</li>
+        <li>Рассылка</li>
+        <li>Акции</li>
+        <li>Новости</li>
+      </ul>
+    </div>
+    <div class="schedule">
+      <div class="head-schedule">
+        <h3> <img src="./icons/clock.png" alt="clock" width="19" height="19">
+          График роботы</h3>
+        <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="scheduleArrow"
+          onclick="accordeon('scheduleBlock','scheduleArrow')">
+
+      </div>
+      <div id="scheduleBlock">
+        <div class="time-send">
+          <h3>Доставка / отправка</h3>
+          <p>пн-пт с 9:00 до 18:00 </p>
+        </div>
+        <div class="time-call">
+          <h3>Приём и обработка звонков</h3>
+          <p>пн-пт с 9:00 до 19:00 </p>
+          <p>сб с 11:00 до 17:00 </p>
+        </div>
+        <div class="order-online">
+          <h3>Приём заказов через сайт - <br> круглосуточно</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>
