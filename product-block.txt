@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
+  <script src="toggle.js"></script>
+  <script src="Jquery.js"></script>
+</head>
+<style>
+
+    /******************************** PRODUCT BLOCK ********************************/
+
+    .rating-slot {
+    margin-bottom: 30px;
+}
+
+.rating {
+    width: 100px;
+}
+
+.rating input {
+    float: right;
+    opacity: 0;
+    position: absolute;
+}
+
+.rating a,
+.rating label {
+    float: right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+
+.rating label:hover~label,
+.rating input:focus~label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover~a,
+.rating a:focus,
+.rating a:focus~a {
+    background: url('../icons/star-yellow.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.rating2 {
+    direction: rtl;
+}
+
+.rating2 a {
+    float: none
+}
+
+.action-block>div:nth-child(4n) {
+    border-right: none;
+}
+
+.action-block>div:nth-child(n+5) {
+    border-bottom: none;
+}
+
+.rating-slot>div>a {
+    background: url('../icons/star-grey.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+
+/* raiting */
+
+.product-block-1 {
+    padding: 0 15px;
+    border-right: 1px solid #CECECE;
+    border-bottom: 1px solid #CECECE;
+    width: 205px;
+    height: 400px;
+    display: block;
+}
+
+
+.icons-product {
+    float: right;
+    margin-top: -25px;
+}
+
+.icons-product>li>div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BEBEBE;
+}
+
+.icons-product>li>div>img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.icons-product>li {
+    list-style: none;
+    display: inline-block;
+}
+
+.icons-product>li:last-child {
+    background-color: #0467B3;
+}
+
+.product-name {
+    font-family: Roboto-Bold;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #363636;
+}
+
+.country {
+    font-family: Roboto-Medium;
+    color: #BEBEBE;
+    font-size: 12px;
+    margin-top: -13px;
+}
+
+.discount-block {
+    margin-left: -15px;
+    margin-bottom: -45px;
+    padding-top: 5px;
+    padding-left: 15px;
+    color: black;
+    font-size: 10px;
+    width: 70px;
+    height: 30px;
+}
+
+.img-product {
+    margin: 10px 0;
+}
+
+.review {
+    font-family: Roboto-Medium;
+    color: #00508F;
+    font-size: 10px;
+    float: right;
+}
+
+.product-block-1>.chose-volume {
+    font-family: Roboto-Light;
+    color: #666666;
+    font-size: 12px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.volume {
+    margin: auto 0;
+    margin-right: 115px;
+
+}
+
+
+.choose-arrow-green{
+  float: right;
+  margin-top: -15px;
+  margin-right: -30px;
+}
+
+
+.price {
+    font-family: Roboto-Medium;
+    font-size: 16;
+    color: #363636;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+.price>s {
+    display: block;
+    color: #CB1B1B;
+    font-size: 9px;
+}
+
+/* product block ---2 */
+
+.product-block-2 {
+    padding: 0 15px;
+    border-right: 1px solid #CECECE;
+    border-bottom: 1px solid #CECECE;
+    width: 205px;
+    height: 400px;
+    display: block;
+}
+
+.product-block-2>.chose-volume {
+    font-family: Roboto-Light;
+    color: #666666;
+    font-size: 12px;
+    display: flex;
+    margin-bottom: -9px;
+}
+
+.product-block-2>.discount-block {
+    display: none;
+}
+
+.product-block-2>.price {
+    color: 666666;
+    font-size: 11px;
+    margin-top: 37px;
+}
+      /********************************\_____PRODUCT BLOCK______/********************************/
+
+      .topSell-katalog {
+    background-color: white;
+    width: 950px;
+    margin: 0 auto;
+}
+
+.head-topPrice {
+    font-family: Roboto-Regular;
+    font-size: 29px;
+    color: #2A2A2A;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+.topSell-katalog {
+    margin-top: 20px;
+}
+
+.topSell-block {
+    margin: 0 auto;
+    width: 950px;
+    display: flex;
+}
+
+.topSell-block>div:last-child {
+    border-right: none;
+}
+
+.new-product-block>div:last-child {
+    border-right: none;
+}
+
+
+
+</style>
+<script>
+  function toggle(name) {
+    if (name.style.display == 'block') {
+      document.getElementById("arrow-down-volume").setAttribute('src', './icons/arrow-down-product.png');
+    } else {
+      document.getElementById("arrow-down-volume").setAttribute('src', './icons/arrow-up-product.png');
+    }
+    name.style.display = (name.style.display == 'block') ? '' : 'block';
+  }
+function changeValue(val ,name){
+document.getElementById("volume").value=val;
+toggle(name)
+}
+
+</script>
+
+<body>
+<div class="topSell-block">
+                <div class="product-block-1">
+    
+                    <h3 class="product-name">Procolor 225W Starter Kit - Smok
+                    </h3>
+                    <div class="country">USA</div>
+    
+                    <img src="./images/product1.png" alt="product1" class="img-product" width="220" height="180">
+                    <div class="rating-slot">
+                        <div class="review">Отзыв(0)</div>
+    
+                        <div class="rating rating1">
+                            <!--
+                                    -->
+                            <a href="#5">
+                            </a>
+                            <!--
+                                    -->
+                            <a href="#4">
+                            </a>
+                            <!--
+                                    -->
+                            <a href="#3">
+                            </a>
+                            <!--
+                                    -->
+                            <a href="#2">
+                            </a>
+                            <!--
+                                    -->
+                            <a href="#1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="drop-down-volume">
+                        <input type="text"  class="volume" id="volume" value="3 мг" onclick="out(this.value)" readonly > 
+                        <img src="./icons/arrow-down-product.png" alt=""  class="arrow-down-volume" id="arrow-down-volume" onclick="toggle(document.getElementById('list-volume'))"  >
+                        <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green"  width="13" height="8">
+                        <ul id="list-volume" class="list-volume">
+                          <li class="line-drop-down" ><input type="text" value="0 мг." onclick="out(this.value,toggle(document.getElementById('list-volume')))" readonly >
+                          </li>
+                          <li class="line-drop-down" >  <input type="text" value="2 мг." onclick="out(this.value,toggle(document.getElementById('list-volume')))" readonly >
+                          </li>
+                          <li class="line-drop-down" >  <input type="text" value="3 мг." onclick="out(this.value,toggle(document.getElementById('list-volume')))" readonly>
+                          </li>
+                        </ul>
+                      </div>
+                    <div class="price">
+                        <s>2288грн</s>
+    
+                        1488 грн.
+                    </div>
+                    <ul class="icons-product">
+                        <li>
+                            <div>
+                                <img src="./icons/balance-product.png" alt="balance-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/like-product.png" alt="like-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/truk.png" alt="truck" width="15" height="13">
+                            </div>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div class="product-block-2">
+    
+                    <h3 class="product-name">Procolor 225W Starter Kit - Smok
+                    </h3>
+                    <div class="country">USA</div>
+    
+    
+                    <img src="./images/product2.png" alt="product1" class="img-product" width="215" height="180">
+                    <div class="rating-slot">
+                        <div class="review">Отзыв(33)</div>
+    
+                        <div class="rating rating1">
+                            <!--
+                                        -->
+                            <a href="#5">
+                            </a>
+                            <!--
+                                        -->
+                            <a href="#4">
+                            </a>
+                            <!--
+                                        -->
+                            <a href="#3">
+                            </a>
+                            <!--
+                                        -->
+                            <a href="#2">
+                            </a>
+                            <!--
+                                        -->
+                            <a href="#1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chose-volume">
+                        <div class="volume">2мг.</div> <img src="./icons/arrow-down-product.png" alt="arrow-down-product"
+                            width="7" height="4" class="arr-choseValume" id="arr-choseValume">
+                        <img src="./icons/green-arrow.png" alt="green-arrow" width="13" height="8">
+                    </div>
+                    <div class="price">
+                        Нет в наличии
+                    </div>
+                    <ul class="icons-product">
+                        <li>
+                            <div>
+                                <img src="./icons/balance-product.png" alt="balance-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/like-product.png" alt="like-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/truk.png" alt="truck" width="15" height="13">
+                            </div>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div class="product-block-1">
+    
+                    <h3 class="product-name">Procolor 225W Starter Kit - Smok
+                    </h3>
+                    <div class="country">USA</div>
+    
+                    <img src="./images/product3.png" alt="product1" class="img-product" width="220" height="180">
+                    <div class="rating-slot">
+                        <div class="review">Отзыв(0)</div>
+    
+                        <div class="rating rating1">
+                            <!--
+                                            -->
+                            <a href="#5">
+                            </a>
+                            <!--
+                                            -->
+                            <a href="#4">
+                            </a>
+                            <!--
+                                            -->
+                            <a href="#3">
+                            </a>
+                            <!--
+                                            -->
+                            <a href="#2">
+                            </a>
+                            <!--
+                                            -->
+                            <a href="#1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chose-volume">
+                        <div class="volume">2мг.</div> <img src="./icons/arrow-down-product.png" alt="arrow-down-product"
+                            width="7" height="4" class="arr-choseValume" id="arr-choseValume">
+                        <img src="./icons/green-arrow.png" alt="green-arrow" width="13" height="8">
+                    </div>
+                    <div class="price">
+                        <s>2288грн</s>
+    
+                        1488 грн.
+                    </div>
+                    <ul class="icons-product">
+                        <li>
+                            <div>
+                                <img src="./icons/balance-product.png" alt="balance-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/like-product.png" alt="like-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/truk.png" alt="truck" width="15" height="13">
+                            </div>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div class="product-block-2">
+    
+                    <h3 class="product-name">Procolor 225W Starter Kit - Smok
+                    </h3>
+                    <div class="country">USA</div>
+    
+    
+                    <img src="./images/product4.png" alt="product1" class="img-product" width="215" height="180">
+                    <div class="rating-slot">
+                        <div class="review">Отзыв(33)</div>
+    
+                        <div class="rating rating1">
+                            <!--
+                                                -->
+                            <a href="#5">
+                            </a>
+                            <!--
+                                                -->
+                            <a href="#4">
+                            </a>
+                            <!--
+                                                -->
+                            <a href="#3">
+                            </a>
+                            <!--
+                                                -->
+                            <a href="#2">
+                            </a>
+                            <!--
+                                                -->
+                            <a href="#1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chose-volume">
+                        <div class="volume">2мг.</div> <img src="./icons/arrow-down-product.png" alt="arrow-down-product"
+                            width="7" height="4" class="arr-choseValume" id="arr-choseValume">
+                        <img src="./icons/green-arrow.png" alt="green-arrow" width="13" height="8">
+                    </div>
+                    <div class="price">
+                        Нет в наличии
+                    </div>
+                    <ul class="icons-product">
+                        <li>
+                            <div>
+                                <img src="./icons/balance-product.png" alt="balance-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/like-product.png" alt="like-product" width="13" height="12">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./icons/truk.png" alt="truck" width="15" height="13">
+                            </div>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+            </div>
+            <div class="link-topSell">
+                <a href="#">
+                    Посмотреть все
+                </a>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Git pushs -->
 <html lang="en">
 <!-- <details></details> menu -->
 
@@ -21,19 +22,22 @@
     function O(i) {
         return document.getElementById(i)
     }
+
     function S(i) {
         return O(i).style
     }
-    $(function () {
+    $(function() {
         $("#footer").load("test-page.html");
     });
-function showMenu(){
-    S('menu').position = (S('menu').position == 'fixed') ? '' : 'fixed'
-}
-function mobileMenu() {
-    S('mob-menu').display = (S('mob-menu').display == 'block') ? '' : 'block'
 
-}
+    function showMenu() {
+        S('menu').position = (S('menu').position == 'fixed') ? '' : 'fixed'
+    }
+
+    function mobileMenu() {
+        S('mob-menu').display = (S('mob-menu').display == 'block') ? '' : 'block'
+
+    }
 </script>
 
 <body onload="startFunctionDropDonwList()">
@@ -102,12 +106,10 @@ function mobileMenu() {
         <div class="menu">
             <div class="list-menu">
                 <div class="head-menu">
-                    <img src="./icons/katalog.png" class="icon-cub" alt="blokc katalog " class="imgs" width="33"
-                        height="33">
+                    <img src="./icons/katalog.png" class="icon-cub" alt="blokc katalog " class="imgs" width="33" height="33">
 
                     <h3>КАТАЛОГ ТОВАРОВ</h3>
-                    <img src="./icons/arrow-up.png" alt="arrow up" width="11" height="6" class="arrow-up-katalog"
-                        id="arrow-up-katalog" onclick="showMenu()">
+                    <img src="./icons/arrow-up.png" alt="arrow up" width="11" height="6" class="arrow-up-katalog" id="arrow-up-katalog" onclick="showMenu()">
                     <div class="mob-head">
                         <img src="./icons/burger-but.png" alt="burger but" class='mob-menu-but' onclick="mobileMenu()" width="27" height="18">
                     </div>
@@ -126,8 +128,7 @@ function mobileMenu() {
                     <div class="num">
                         4
                     </div>
-                    <img src="./icons/balance.png" alt="balance" width="20 " height="18"
-                        onclick="toggle(document.getElementById('comparison'))">
+                    <img src="./icons/balance.png" alt="balance" width="20 " height="18" onclick="toggle(document.getElementById('comparison'))">
                 </div>
                 <div class="comparison" id="comparison">
                     <div class="head-comparison">
@@ -161,8 +162,7 @@ function mobileMenu() {
                     <div class="num">
                         4
                     </div>
-                    <img src="./icons/hear.png" alt="balance" width="20 " height="18"
-                        onclick="toggle(document.getElementById('favorites'))">
+                    <img src="./icons/hear.png" alt="balance" width="20 " height="18" onclick="toggle(document.getElementById('favorites'))">
 
                 </div>
                 <div class="favorites" id="favorites">
@@ -172,8 +172,7 @@ function mobileMenu() {
                     </div>
 
                     <div class="product-favorites">
-                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45"
-                                height="45">
+                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45" height="45">
                         </div>
                         <div class="name-favorites">
                             <p>Procolor 225W Starter Kit - Smok</p>
@@ -185,8 +184,7 @@ function mobileMenu() {
                         </div>
                     </div>
                     <div class="product-favorites">
-                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45"
-                                height="45">
+                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45" height="45">
                         </div>
                         <div class="name-favorites">
                             <p>Procolor 225W Starter Kit - Smok</p>
@@ -198,8 +196,7 @@ function mobileMenu() {
                         </div>
                     </div>
                     <div class="product-favorites">
-                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45"
-                                height="45">
+                        <div class="img-favorites"><img src="./images/product1.png" alt="product" width="45" height="45">
                         </div>
                         <div class="name-favorites">
                             <p>Procolor 225W Starter Kit - Smok</p>
@@ -305,120 +302,120 @@ function mobileMenu() {
         </div>
     </div>
     <div class="mob-menu" id='mob-menu'>
-            <div class="head-mob-menu">
-                <img  src="./icons/close-icon-mob.png" alt="close-icon-mob" height="19" width="19" onclick="mobileMenu()" >    КАТАЛОГ ТОВАРОВ
-            </div>
-            <!-- class="mob-menu-lsit"  -->
-                <ul class="mob-menu-lsit" >
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/waterVape.png" alt="Жидкости для вейпа" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Жидкости для вейпа</a>
-                                </div>
-                            </div>
-                
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/startPuck.png" alt="Стартовые наборы" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Стартовые наборы</a> </div>
-                
-                            </div>
-                        </li>
-                
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/balons.png" alt="Баки" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Баки</a> </div>
-                
-                            </div>
-                        </li>
-                
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/drip.png" alt="Дрипки" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Дрипки</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/boxSmoke.png" alt="Боксмоды" width="32" height="32">
-                
-                                </div>
-                                <div class="text-slot"> <a href="">Боксмоды</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/furMode.png" alt="Мехмоды" width="32" height="32">
-                
-                                </div>
-                                <div class="text-slot"> <a href="">Мехмоды</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/vapor.png" alt="Испарители" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Испарители</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/baterry.png" alt="Аккумуляторы" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Аккумуляторы</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/charge.png" alt="Боксмоды" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Зарядные</a> </div>
-                
-                            </div>
-                        </li>
-                        <li>
-                            <div class="main-slot">
-                                <div class="img-slot">
-                                    <img src="./icons/cottonWool.png" alt="Боксмоды" width="32" height="32">
-                                </div>
-                                <div class="text-slot"> <a href="">Вата</a> </div>
-                
-                            </div>
-                        </li>
-                
-                
-                    </ul> 
-                    <div class="group-link-account">
-                            <div class="but-singUp"> <img src="./icons/mob-singUp.png" alt="mob-singUp" width="20" height="20"> <a href="">Регистрация</a></div>
-                            <div class="but-singIn">  <img src="./icons/mob-singIn.png" alt="mob-singIn" width="21" height="21">   <a href="">Войти</a></div>
-                    </div>
-                
-    
+        <div class="head-mob-menu">
+            <img src="./icons/close-icon-mob.png" alt="close-icon-mob" height="19" width="19" onclick="mobileMenu()"> КАТАЛОГ ТОВАРОВ
         </div>
+        <!-- class="mob-menu-lsit"  -->
+        <ul class="mob-menu-lsit">
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/waterVape.png" alt="Жидкости для вейпа" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Жидкости для вейпа</a>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/startPuck.png" alt="Стартовые наборы" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Стартовые наборы</a> </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/balons.png" alt="Баки" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Баки</a> </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/drip.png" alt="Дрипки" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Дрипки</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/boxSmoke.png" alt="Боксмоды" width="32" height="32">
+
+                    </div>
+                    <div class="text-slot"> <a href="">Боксмоды</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/furMode.png" alt="Мехмоды" width="32" height="32">
+
+                    </div>
+                    <div class="text-slot"> <a href="">Мехмоды</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/vapor.png" alt="Испарители" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Испарители</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/baterry.png" alt="Аккумуляторы" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Аккумуляторы</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/charge.png" alt="Боксмоды" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Зарядные</a> </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="main-slot">
+                    <div class="img-slot">
+                        <img src="./icons/cottonWool.png" alt="Боксмоды" width="32" height="32">
+                    </div>
+                    <div class="text-slot"> <a href="">Вата</a> </div>
+
+                </div>
+            </li>
+
+
+        </ul>
+        <div class="group-link-account">
+            <div class="but-singUp"> <img src="./icons/mob-singUp.png" alt="mob-singUp" width="20" height="20"> <a href="">Регистрация</a></div>
+            <div class="but-singIn"> <img src="./icons/mob-singIn.png" alt="mob-singIn" width="21" height="21"> <a href="">Войти</a></div>
+        </div>
+
+
+    </div>
     <div class="block-katalog">
 
-            
-        <div class="list-products"  >
+
+        <div class="list-products">
             <ul class="all-products-kategory" id='menu'>
                 <li>
                     <div class="main-slot">
@@ -522,18 +519,15 @@ function mobileMenu() {
         <div class="slide-block">
             <div class="main-slide" id="main-slide">
                 <div class="arrow-right">
-                    <img src="./icons/big-arrow-right.png" alt="arr-right" width="15" height="38"
-                        onclick="next('main-slide')">
+                    <img src="./icons/big-arrow-right.png" alt="arr-right" width="15" height="38" onclick="next('main-slide')">
                 </div>
                 <div class="arrow-left">
-                    <img src="./icons/big-arrow-left.png" alt="arr-left" width="15" height="38"
-                        onclick="prev('main-slide')">
+                    <img src="./icons/big-arrow-left.png" alt="arr-left" width="15" height="38" onclick="prev('main-slide')">
                 </div>
             </div>
             <div class="left-slide" id="left-slide">
                 <div class="arrow-right">
-                    <img src="./icons/arrow-right.png" alt="arr-right" width="9" height="22"
-                        onclick="prev('left-slide')">
+                    <img src="./icons/arrow-right.png" alt="arr-right" width="9" height="22" onclick="prev('left-slide')">
                 </div>
                 <div class="arrow-left">
                     <img src="./icons/arrow-left.png" alt="arr-left" width="9" height="22" onclick="next('left-slide')">
@@ -541,12 +535,10 @@ function mobileMenu() {
             </div>
             <div class="right-slide" id="right-slide">
                 <div class="arrow-right">
-                    <img src="./icons/arrow-right.png" alt="arr-right" width="9" height="22"
-                        onclick="next('right-slide')">
+                    <img src="./icons/arrow-right.png" alt="arr-right" width="9" height="22" onclick="next('right-slide')">
                 </div>
                 <div class="arrow-left">
-                    <img src="./icons/arrow-left.png" alt="arr-left" width="9 " height="22"
-                        onclick="prev('right-slide')">
+                    <img src="./icons/arrow-left.png" alt="arr-left" width="9 " height="22" onclick="prev('right-slide')">
                 </div>
             </div>
         </div>
@@ -556,16 +548,16 @@ function mobileMenu() {
     <div class="action-katalog">
         <div class="action-block">
             <div class="product-block-1">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
+
                 <img src="./images/product1.png" alt="product1" class="img-product" width="220" height="180">
-    
+
                 <div class="rating-slot">
                     <div class="review">Отзыв(0)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                 -->
@@ -591,25 +583,19 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
-                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,0)"
-                                value="0 мг." readonly>
+                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,0)" value="0 мг." readonly>
                         </li>
-                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,1)"
-                                value="2 мг." readonly>
+                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,1)" value="2 мг." readonly>
                         </li>
-                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,1)"
-                                value="3 мг." readonly>
+                        <li class="line-drop-down"><input type="text" class="inputList" onclick="changeVal(0,1)" value="3 мг." readonly>
                         </li>
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-    
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -628,19 +614,19 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-2">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
-    
+
+
                 <img src="./images/product2.png" alt="product1" class="img-product" width="215" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(33)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                     -->
@@ -697,18 +683,18 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-1">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
+
                 <img src="./images/product3.png" alt="product1" class="img-product" width="220" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(0)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                         -->
@@ -734,8 +720,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -747,9 +732,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-    
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -768,19 +751,19 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-2">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
-    
+
+
                 <img src="./images/product4.png" alt="product1" class="img-product" width="215" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(33)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                             -->
@@ -806,8 +789,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -838,19 +820,19 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-1">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
+
                 <img src="./images/product1.png" alt="product1" class="img-product" width="220" height="180">
-    
+
                 <div class="rating-slot">
                     <div class="review">Отзыв(0)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                 -->
@@ -876,8 +858,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -889,9 +870,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-    
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -910,19 +889,19 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-2">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
-    
+
+
                 <img src="./images/product2.png" alt="product1" class="img-product" width="215" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(33)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                         -->
@@ -948,8 +927,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -980,18 +958,18 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-1">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
+
                 <img src="./images/product3.png" alt="product1" class="img-product" width="220" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(0)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                             -->
@@ -1017,8 +995,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -1030,9 +1007,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-    
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -1051,19 +1026,19 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
             <div class="product-block-2">
-    
+
                 <h3 class="product-name">Procolor 225W Starter Kit - Smok
                 </h3>
                 <div class="country">USA</div>
-    
-    
+
+
                 <img src="./images/product4.png" alt="product1" class="img-product" width="215" height="180">
                 <div class="rating-slot">
                     <div class="review">Отзыв(33)</div>
-    
+
                     <div class="rating rating1">
                         <!--
                                                 -->
@@ -1089,8 +1064,7 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
                     <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
@@ -1121,21 +1095,21 @@ function mobileMenu() {
                         </div>
                     </li>
                 </ul>
-    
+
             </div>
         </div>
 
-            <div class="link-froProducts">
-                <a href="#">
+        <div class="link-froProducts">
+            <a href="#">
                     Посмотреть все
                 </a>
         </div>
     </div>
-</div>
+    </div>
 
-           
-        
-          <h2 class="head-topPrice">Топ продаж</h2>
+
+
+    <h2 class="head-topPrice">Топ продаж</h2>
 
 
     <div class="topSell-katalog">
@@ -1175,10 +1149,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1189,9 +1161,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -1248,10 +1218,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1318,10 +1286,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1332,9 +1298,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -1391,10 +1355,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1434,7 +1396,7 @@ function mobileMenu() {
         </div>
     </div>
 
-  
+
 
     </div>
     <h2 class="head-newProduct">Новинки</h2>
@@ -1476,10 +1438,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1490,9 +1450,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -1549,10 +1507,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1619,10 +1575,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1633,9 +1587,7 @@ function mobileMenu() {
                     </ul>
                 </div>
                 <div class="price">
-                    <s>2288грн</s>
-
-                    1488 грн.
+                    <s>2288грн</s> 1488 грн.
                 </div>
                 <ul class="icons-product">
                     <li>
@@ -1692,10 +1644,8 @@ function mobileMenu() {
                 </div>
                 <div class="drop-down-volume">
                     <input type="text" class="volume" id="volume" value="3 мг" readonly>
-                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume"
-                        onclick="dropDownList(0,0)">
-                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13"
-                        height="8">
+                    <img src="./icons/arrow-down-product.png" alt="" class="arrow-down-volume" id="arrow-down-volume" onclick="dropDownList(0,0)">
+                    <img src="./icons/green-arrow.png" alt="green-arrow" class="choose-arrow-green" width="13" height="8">
                     <ul id="list-volume" class="list-volume">
                         <li class="line-drop-down"><input type="text" value="0 мг." readonly>
                         </li>
@@ -1741,8 +1691,7 @@ function mobileMenu() {
         <div class="slide-company">
 
             <div class="slide-company-block">
-                <div class="arr-slide-company-left"> <img src="./icons/arrow-left-slideCompany.png" alt="arrow-left"
-                        width="8" height="19">
+                <div class="arr-slide-company-left"> <img src="./icons/arrow-left-slideCompany.png" alt="arrow-left" width="8" height="19">
                 </div>
                 <img src="./images/company1.png" alt="company1" width="127" height="62">
                 <img src="./images/company2.png" alt="company2" width="111" height="33">
@@ -1750,8 +1699,7 @@ function mobileMenu() {
                 <img src="./images/company4.png" alt="company4" width="88" height="88  ">
                 <img src="./images/company1.png" alt="company1" width="127" height="62">
                 <img src="./images/company3.png" alt="company2" width="113" height="114">
-                <div class="arr-slide-company-right"> <img src="./icons/arrow-right-slideCompany.png" alt="arrow-left"
-                        width="8" height="19">
+                <div class="arr-slide-company-right"> <img src="./icons/arrow-right-slideCompany.png" alt="arrow-left" width="8" height="19">
                 </div>
             </div>
         </div>
@@ -1770,11 +1718,8 @@ function mobileMenu() {
                 <img src="./images/img-news1.png" alt="img-news1" width="133" height="70">
                 <div class="text-info">
                     <p>Электронная сигарета JUUL в наличии!</p>
-                    <p>finibus libero ac leo congue, sit amet iaculis urna porta. <br>
-                        Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. Nunc <br>
-                        egestas ante risus,
-                        nec elementum erat hendrerit at. Mauris eget <br>
-                        elementum nisl ... <a href="#">Читать далле</a>
+                    <p>finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. Nunc <br> egestas ante risus, nec elementum erat hendrerit at. Mauris eget <br> elementum nisl
+                        ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1784,11 +1729,8 @@ function mobileMenu() {
                 <img src="./images/img-news2.png" alt="img-news1" width="133" height="70">
                 <div class="text-info">
                     <p>Новинка! Jam Monster - PB и Zenith - Hydra уже в наличии!</p>
-                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi,
-                        fringilla
-                        blandit ultricies ut, molestie id diam <br> . Nunc egestas ante risus, nec elementum erat
-                        hendrerit
-                        at. Mauris <br> eget elementum nisl ... <a href="#">Читать далле</a>
+                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam <br> . Nunc egestas ante risus, nec elementum erat hendrerit at. Mauris <br> eget elementum
+                        nisl ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1798,11 +1740,8 @@ function mobileMenu() {
                 <img src="./images/img-news3.png" alt="img-news1" width="133" height="70">
                 <div class="text-info">
                     <p>Новинка! Жидкость Carter Elixirs доступна для заказа</p>
-                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi,
-                        fringilla
-                        blandit ultricies ut, molestie id diam. <br> Nunc egestas ante risus, nec elementum erat
-                        hendrerit
-                        at. Mauris <br> eget elementum nisl ... <a href="#">Читать далле</a>
+                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. <br> Nunc egestas ante risus, nec elementum erat hendrerit at. Mauris <br> eget elementum
+                        nisl ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1812,11 +1751,8 @@ function mobileMenu() {
             <div class="info-news">
                 <img src="./images/img-news1.png" alt="img-news1" width="133" height="70">
                 <div class="text-info"> <span>Электронная сигарета JUUL в наличии!</span>
-                    <p>finibus libero ac leo congue, sit amet iaculis urna porta. <br>
-                        Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. Nunc <br>
-                        egestas ante risus,
-                        nec elementum erat hendrerit at. Mauris eget <br>
-                        elementum nisl ... <a href="#">Читать далле</a>
+                    <p>finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. Nunc <br> egestas ante risus, nec elementum erat hendrerit at. Mauris eget <br> elementum nisl
+                        ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1825,11 +1761,8 @@ function mobileMenu() {
             <div class="info-news">
                 <img src="./images/img-news2.png" alt="img-news1" width="133" height="70">
                 <div class="text-info"> <span>Новинка! Jam Monster - PB и Zenith - Hydra уже в наличии!</span>
-                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi,
-                        fringilla
-                        blandit ultricies ut, molestie id diam <br> . Nunc egestas ante risus, nec elementum erat
-                        hendrerit
-                        at. Mauris <br> eget elementum nisl ... <a href="#">Читать далле</a>
+                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam <br> . Nunc egestas ante risus, nec elementum erat hendrerit at. Mauris <br> eget elementum
+                        nisl ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1838,11 +1771,8 @@ function mobileMenu() {
             <div class="info-news">
                 <img src="./images/img-news3.png" alt="img-news1" width="133" height="70">
                 <div class="text-info"> <span>Новинка! Жидкость Carter Elixirs доступна для заказа</span>
-                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi,
-                        fringilla
-                        blandit ultricies ut, molestie id diam. <br> Nunc egestas ante risus, nec elementum erat
-                        hendrerit
-                        at. Mauris <br> eget elementum nisl ... <a href="#">Читать далле</a>
+                    <p>Nullam finibus libero ac leo congue, sit amet iaculis urna porta. <br> Praesent turpis nisi, fringilla blandit ultricies ut, molestie id diam. <br> Nunc egestas ante risus, nec elementum erat hendrerit at. Mauris <br> eget elementum
+                        nisl ... <a href="#">Читать далле</a>
 
                     </p>
                 </div>
@@ -1869,10 +1799,8 @@ function mobileMenu() {
         <div class="block-lists">
             <!-- contact -->
             <div class="head-socila-contac">
-                <h3> <img src="./icons/phone-footer.png" alt="phone" width="19" height="19">
-                    Связь с нами</h3>
-                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="socila-down"
-                    class="socila-down" onclick="accordeon('social-block','socila-down')">
+                <h3> <img src="./icons/phone-footer.png" alt="phone" width="19" height="19"> Связь с нами</h3>
+                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="socila-down" class="socila-down" onclick="accordeon('social-block','socila-down')">
             </div>
             <div class="social-block" id="social-block">
                 <ul class="phone-list">
@@ -1902,10 +1830,8 @@ function mobileMenu() {
         </div>
         <div class="list-katalog">
             <div class="head-list-katalog">
-                <h3> <img src="./icons/footer-katalog.png" alt="footer katalog " width="19" height="19">
-                    КАТАЛОГ ТОВАРОВ</h3>
-                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDownAcc"
-                    class="arrowDownAcc" onclick="accordeon('name-product-list','arrowDownAcc')">
+                <h3> <img src="./icons/footer-katalog.png" alt="footer katalog " width="19" height="19"> КАТАЛОГ ТОВАРОВ</h3>
+                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDownAcc" class="arrowDownAcc" onclick="accordeon('name-product-list','arrowDownAcc')">
 
             </div>
 
@@ -1924,10 +1850,9 @@ function mobileMenu() {
         </div>
         <div class="info-clients">
             <div class="head-info-clients">
-                <h3> <img src="./icons/clients.png" alt="clients" width="23" height="19">
-                    Клиентам</h3>
-                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDown"
-                    onclick="accordeon('for-client','arrowDown')">
+                <h3> <img src="./icons/clients.png" alt="clients" width="23" height="19"> Клиентам
+                </h3>
+                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="arrowDown" onclick="accordeon('for-client','arrowDown')">
 
             </div>
 
@@ -1944,10 +1869,8 @@ function mobileMenu() {
         </div>
         <div class="schedule">
             <div class="head-schedule">
-                <h3> <img src="./icons/clock.png" alt="clock" width="19" height="19">
-                    График роботы</h3>
-                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="scheduleArrow"
-                    onclick="accordeon('scheduleBlock','scheduleArrow')">
+                <h3> <img src="./icons/clock.png" alt="clock" width="19" height="19"> График роботы</h3>
+                <img src="./icons/accordeon-arrow-down.png" alt="phone" width="14" height="6" id="scheduleArrow" onclick="accordeon('scheduleBlock','scheduleArrow')">
 
             </div>
             <div id="scheduleBlock">
