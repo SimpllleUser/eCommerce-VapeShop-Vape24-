@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -13,13 +14,33 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/, //Регулярка для выбора файла с нужным расширением
-            use: [{
-                    loader: MiniCssExtractPlugin.loader
-                },
-                "css-loader"
-            ]
-        }]
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(gpj|png|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: './',
+                        useRelativePath: true
+                    }
+                }]
+            }
+            //     {
+            //     test: /\.css$/, //Регулярка для выбора файла с нужным расширением
+            //     use: [{
+            //             loader: MiniCssExtractPlugin.loader
+            //         },
+            //         "css-loader"
+            //     ]
+            // }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -34,6 +55,20 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jQuery'
+        }),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default',
+                    {
+                        discardCommnets: {
+                            removeAll: true
+                        }
+                    }
+                ]
+            },
+            canPrint: true
         })
         // new CleanWebpackPlugin({
         //     path: './dist/*.*' Очистка от лишних не используемых файлов

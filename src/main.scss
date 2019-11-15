@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+$red: red;
+body {
+    background-image: url('./mainSlideImg.png');
+}
+
+ul {
+    li {
+        background-color: $red;
+    }
+}
