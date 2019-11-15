@@ -1,3 +1,4 @@
+//Deploy инструкция -- удалить все файлы кроме scr , static(img/css..),package.json
 const path = require("path");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
