@@ -1,8 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-$red: red;
-body {
-    background-image: url('./static/images/company1.png');
-}
+@import "./test.scss";
+body {}
 
 ul {
     li {

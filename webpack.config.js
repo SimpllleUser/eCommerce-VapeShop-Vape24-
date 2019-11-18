@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UnusedModulesWebpackPlugin = require('unused-modules-webpack-plugin').UnusedModulesWebpackPlugin; //Предупртждения про не исполльзуемые файлы
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -27,7 +28,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: './',
+                        outputPath: './img',
                         useRelativePath: true
                     }
                 }]
@@ -69,9 +70,17 @@ module.exports = {
                 ]
             },
             canPrint: true
-        })
+        }),
+        new UnusedModulesWebpackPlugin({
+            patterns: [
+                "src/**/**.js",
+                "!src/**/**.css",
+            ],
+            globOptions: { ignore: `node_modules/**/*` },
+        }),
         // new CleanWebpackPlugin({
         //     path: './dist/*.*' Очистка от лишних не используемых файлов
         // })
     ]
 };
+s
